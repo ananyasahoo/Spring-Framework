@@ -1,0 +1,44 @@
+package com.cg.sms.dao;
+
+/**
+ * This StudentDAO interface will perform the CRUD Operations
+ * @author Ananya Priyadarshini
+ *
+ */
+public interface StudentDAO {
+	/**
+	 * It will save the stu object into the students table
+	 * @param stu object will be saved
+	 */
+	 void save(Student stu);
+	 /**
+		 * It will delete the stu object from the students table
+		 * @param stu object will be deleted
+		 */
+		
+	 void delete(Student stu);
+	 
+	 /**
+		 * It will delete the stu object based on student id
+		 * @param id of the person
+		 */
+		
+	 
+	 void delete(int id);
+	 /**
+		 * It will update the stu object 
+		 * @param student data will be updated
+		 */
+	 
+	 
+	 void update(Student stu);
+	 /**
+		 * It will return the list of users in the users table
+		 * @return
+		 */
+	 
+	 List<Student> findAll();
+	 
+	
+	
+}

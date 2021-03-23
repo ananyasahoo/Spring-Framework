@@ -1,0 +1,5 @@
+package com.cg.sms.dao;
+
+public interface StudentDAO {
+
+}

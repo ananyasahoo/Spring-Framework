@@ -1,0 +1,74 @@
+package com.cg.sms.daoimpl;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+
+
+import com.cg.sms.dao.StudentDAO;
+import com.cg.sms.domain.Student;
+
+
+public class StudentDAOImpl implements StudentDAO {
+	EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("JPA-PU");
+	EntityManager entityManager = entityManagerFactory.createEntityManager();
+	@Override
+	public void insert(Student stdnt) {
+		
+		Student student1=new Student();
+		student1.setFname(stdnt.getFname());
+		student1.setLname(stdnt.getLname());
+		student1.setAge(stdnt.getAge());
+		student1.setDepartment(stdnt.getDepartment());
+		entityManager.getTransaction().begin();	
+		entityManager.persist(stdnt);
+		entityManager.getTransaction().commit();
+		entityManager.close();
+		entityManagerFactory.close();
+	}
+
+
+		
+	
+	@Override
+	public void delete(Student student) {
+		
+		
+		
+	}
+	@Override
+	public void delete(int id) {
+		// TODO Auto-generated method stub
+		entityManager.getTransaction().begin();
+		Student student=entityManager.find(Student.class, id);
+		entityManager.remove(student);
+		entityManager.getTransaction().commit();
+		entityManager.close();
+		entityManagerFactory.close();
+		
+		
+	}
+	@Override
+	public void update(Student student) {
+		// TODO Auto-generated method stub
+		entityManager.getTransaction().begin();
+		Student student1=entityManager.find(Student.class,1);
+		student1.setFname("Muppalla");
+		student1.setLname("Prasad");
+		student1.setAge(20);
+		student1.setDepartment("BSC");
+		entityManager.getTransaction().commit();
+		entityManager.close();
+		entityManagerFactory.close();
+				
+		
+	}
+	
+	
+	
+	
+	
+}
+
+

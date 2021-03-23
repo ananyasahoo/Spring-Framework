@@ -1,0 +1,5 @@
+package com.cg.embeddeddemo.modal;
+
+public class UserDetail {
+
+}

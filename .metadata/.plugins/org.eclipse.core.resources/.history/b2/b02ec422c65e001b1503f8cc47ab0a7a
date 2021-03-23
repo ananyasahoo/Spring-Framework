@@ -1,0 +1,5 @@
+package com.cg.cruddemo.model;
+
+public class UserDetail {
+
+}

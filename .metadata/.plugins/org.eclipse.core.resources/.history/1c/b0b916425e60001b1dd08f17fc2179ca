@@ -1,0 +1,5 @@
+package com.cg.cascadingdemo.model;
+
+public class Project {
+
+}

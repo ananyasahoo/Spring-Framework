@@ -1,0 +1,13 @@
+package com.cg.sms.daoimpl;
+
+import com.cg.sms.dao.StudentDAO;
+
+public class StudentDAOImpl implements StudentDAO {
+
+	@Override
+	public void delete(int id) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

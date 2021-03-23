@@ -1,0 +1,11 @@
+package com.cg.sms.domain;
+
+public class Student {
+	int id;
+	String name;
+	String department;
+	int age;
+	
+	
+
+}

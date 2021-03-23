@@ -1,0 +1,5 @@
+package com.cg.inheritancedemo01.model;
+
+public class Project {
+
+}

@@ -1,0 +1,31 @@
+package com.cg.sms.domain;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Department {
+	/*
+	 * Id of the department
+	 */
+	private int  dptid;
+	/*
+	 * Name of the department
+	 */
+	private String dptname;
+	
+	public int getDptid() {
+		return dptid;
+	}
+	public void setDptid(int dptid) {
+		this.dptid = dptid;
+	}
+	public String getDptname() {
+		return dptname;
+	}
+	public void setDptname(String dptname) {
+		this.dptname = dptname;
+	}
+	
+	
+
+}

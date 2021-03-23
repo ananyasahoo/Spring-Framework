@@ -1,0 +1,61 @@
+package com.cg.sms.daoimpl;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+
+import com.cg.sms.dao.List;
+import com.cg.sms.dao.Student;
+import com.cg.sms.dao.StudentDAO;
+import com.cg.sms.domain.Department;
+
+public class StudentDAOImpl implements StudentDAO {
+
+	@Override
+	public void delete(int id) {
+		// TODO Auto-generated method stub
+
+	}
+
+	
+	
+	@Override
+	public void insert(com.cg.sms.domain.Student student) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void delete(com.cg.sms.domain.Student student) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void update(com.cg.sms.domain.Student student) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public java.util.List<com.cg.sms.domain.Student> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	Student student=new Student();
+	student.setFname("Ananya");
+	student.setLname("Priyadarshini");
+	student.setDepartment("CSE");
+	student.setAge("22");
+	
+	
+	EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("JPA-PU");
+	EntityManager entityManager = entityManagerFactory.createEntityManager();
+	entityManager.getTransaction().begin();
+	entityManager.persist(student);
+	//entityManager.persist(project);
+	entityManager.getTransaction().commit();
+	entityManager.close();
+	entityManagerFactory.close();
+}
+
+}
